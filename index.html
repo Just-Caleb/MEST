@@ -10,28 +10,129 @@
     <meta author="Caleb Mensa-Bonsu">
     <title>Caleb Mensa-Bonsu</title>
     <script src="https://kit.fontawesome.com/ca810db8aa.js" crossorigin="anonymous"></script>
+    <script src="modernizr.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 </head>
 
 <body>
     <style>
-       
+.cd-headline.rotate-1 .cd-words-wrapper {
+  display: inline-block;
+  perspective: 300px;
+}
+.cd-headline.rotate-1 b {
+  opacity: 0;
+  transform-origin: 50% 100%;
+  transform: rotateX(180deg);
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
 
+.cd-headline.rotate-1 b.is-visible {
+  position: relative;
+  opacity: 1;
+  transform: rotateX(0deg);
+  animation: cd-rotate-1-in 1.2s;
+}
+
+.cd-headline.rotate-1 b.is-hidden {
+  transform: rotateX(180deg);
+  animation: cd-rotate-1-out 1.2s;
+}
+
+@keyframes cd-rotate-1-in {
+  0% {
+    transform: rotateX(180deg);
+    opacity: 0;
+  }
+  35% {
+    transform: rotateX(120deg);
+    opacity: 0;
+  }
+  65% {
+    opacity: 0;
+  }
+  100% {
+    transform: rotateX(360deg);
+    opacity: 1;
+  }
+}
+
+@keyframes cd-rotate-1-out {
+  0% {
+    transform: rotateX(0deg);
+    opacity: 1;
+  }
+  35% {
+    transform: rotateX(-40deg);
+    opacity: 1;
+  }
+  65% {
+    opacity: 0;
+  }
+  100% {
+    transform: rotateX(180deg);
+    opacity: 0;
+  }
+}
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+}
+
+/* Add a hover effect if you want */
+.fa:hover {
+  opacity: 0.7;
+}
+
+
+/* Facebook */
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+/* Twitter */
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+.fa-instagram{
+    background: #d65d6d;
+  color: white;
+
+}
+
+.fa-linkedin{
+    background: #1d4be2;
+  color: white;
+
+}
+
+.fa {
+  padding: 10px;
+  font-size: 20px;
+  width: 30px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 25%;
+}
 
     </style>
 
     <div class="container">
         <div class="row">
-            <div class="col-sm-2 "> <img src="c.png" alt="..." class="img-fluid " style="max-width: 40%;"></div>
+            <div class="col-sm-2 "> <img src="c.png" alt="..." class="img-fluid " style="max-width: 50%;"></div>
             <div class="col-sm-10 d-flex justify-content-end"> 
                 <ul class="nav" >
                     <li class="nav-bar">
                         <a class="nav-link" href="#"><i class="fa-solid fa-house-chimney p-1"></i>Home</a>
-                    </li>
-                    <li class="nav-bar">
-                        <a class="nav-link" href="#"><i class="fa-solid fa-user-vneck p-1"></i>About</a>
-                    </li>
-                    <li class="nav-bar">
-                        <a class="nav-link" href="#"><i class="fa-solid fa-rocket-launch p-1"></i>Services</a>
                     </li>
                     <li class="nav-bar">
                         <a class="nav-link" href="#"><i class="fa-solid fa-briefcase p-1"></i>Portfolio</a>
@@ -48,8 +149,32 @@
         </div>
 
         <div class="row">
-            <div class="col-sm-6"><div class="p-3  "> <img src="profile1.png" alt="..." class="img-fluid " style="max-width: 60%;"></div></div> 
-            <div class="col-sm-6"><div class="p-3 bg-light ">column two</div>
+            <div class="col-sm-4"><div class="p-3"> <img src="profile1.png" alt="..." class="img-fluid " style="max-width: 100%;"></div></div> 
+                <div class="col-sm-8" class="text-center">
+                    <figure class="text-center">
+                    <h4>Hi There!</h4>
+                    </figure>
+                    <h4 class="cd-headline rotate-1">
+                        <span>I'm </span> 
+                        <span class="cd-words-wrapper" style="width:100%">
+                            <b class="is-visible">CALEB MENSA-BONSU</b>
+                            <b>AN ENTERPRENEUR IN TRAINING</b>
+                            <b>A BUSINESS DEVELOPMENT PROFESSIONAL</b>
+                            <b>A PROJECT MANAGEMENT PROFESSIONAL</b>                       
+                        </span>
+                    </h4>
+                    <figure class="text-center">
+                    <p>I'm an Entreprenuer In Training at MEST Africa, with expertise in business development,project management and Tech. I have over 7 years in experience and exposure.</p>
+                    </figure>
+                    <div class="d-flex flex-row justify-content-center">  
+                        <a href="#" class="fa fa-linkedin"></a>
+                        <a href="#" class="fa fa-instagram"></a>
+                        <a href="#" class="fa fa-twitter"></a>
+                        <a href="#" class="fa fa-facebook"></a>
+                        
+                        
+                    </div>
+                </div>
         </div>
         
     </div>
@@ -58,5 +183,7 @@
     
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="jquery-2.1.1.js"></script>
+    <script src="main.js"></script>
 </body>
 </html>
